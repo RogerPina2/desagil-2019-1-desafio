@@ -72,12 +72,12 @@ public class View extends JPanel {
             g.drawImage(image, col * CELL_SIZE, row * CELL_SIZE, CELL_SIZE, CELL_SIZE, this);
         });
 
-        if (model.getWinner() == model.getHumanPlayer()){
+        if (model.getWinner() == model.getHumanPlayer()) {
 
             g.setColor(Color.BLACK);
-            g.drawString("humano venceu",10,15);
+            g.drawString("humano venceu", 10, 15);
 
-        } else if (model.getWinner() == model.getCpuPlayer()){
+        } else if (model.getWinner() == model.getCpuPlayer()) {
 
             g.setColor(Color.BLACK);
             g.drawString("computador venceu", 10, 15);

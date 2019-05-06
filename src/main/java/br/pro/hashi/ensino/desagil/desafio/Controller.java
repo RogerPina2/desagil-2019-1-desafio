@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class Controller implements KeyListener, ActionListener {
+class Controller implements KeyListener, ActionListener {
     private final Model model;
     private final View view;
 
@@ -17,8 +17,6 @@ public class Controller implements KeyListener, ActionListener {
         this.model = model;
         this.view = view;
     }
-
-
 
 
     @Override
@@ -75,7 +73,7 @@ public class Controller implements KeyListener, ActionListener {
         }
 
         if (model.getHumanPlayer().getRow() == model.getTarget().getRow()
-                && model.getHumanPlayer().getCol() == model.getTarget().getCol()){
+                && model.getHumanPlayer().getCol() == model.getTarget().getCol()) {
 
             model.setWinner(model.getHumanPlayer());
 
