@@ -72,11 +72,21 @@ public class View extends JPanel {
             g.drawImage(image, col * CELL_SIZE, row * CELL_SIZE, CELL_SIZE, CELL_SIZE, this);
         });
 
+        if (model.getWinner() == model.getHumanPlayer()){
+
+            g.setColor(Color.BLACK);
+            g.drawString("humano venceu",10,15);
+
+        } else if (model.getWinner() == model.getCpuPlayer()){
+
+            g.setColor(Color.BLACK);
+            g.drawString("computador venceu", 10, 15);
+        }
+
         // Linha necessária para evitar atrasos
         // de renderização em sistemas Linux.
         getToolkit().sync();
     }
-
 
     // Método de conveniência que carrega uma imagem a partir de um nome
     // de arquivo. Espera-se que esse arquivo esteja em src/main/resources.
